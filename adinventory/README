@@ -1,0 +1,52 @@
+=======
+django-adinventory
+=======
+:Info:  See `github <http://github.com/mongodb/mongo-python-driver/tree>`_ for the latest source.
+:Author: Rahul Agarwal
+:Maintainer: Rahul Agarwal<agarwalrahul.1986@gmail.com>
+
+About
+=====
+
+Django-Adinventory is djano app to manage ad units on your website.It is easy to use and easily maintainable. 
+You should have an adsense account for using AdInventory Package. Replace Main script used for ad inventory with your 
+adsense scripts.
+
+
+Issues / Questions / Feedback
+=============================
+
+Any issues with, questions about, or feedback for django-adinventory should be
+sent to the maintainer email.Issue or feedback will be addressed as early as possible.
+
+Installation
+============
+
+Add adinventory in INSTALLED_APPS of settings file.
+Add 'adinventory.middleware.AdMiddleware' in MIDDLEWARE_CLASSES of settings file.
+Syncdb
+
+Template
+in your main layout template file use {{GAM_HEAD}} in <head> tag.
+
+Dependencies
+============
+
+The PyMongo distribution is supported and tested on Python 2.x, where
+x >= 4 and django 1.2 or greater
+
+Additional dependencies are:
+
+- Adsense Account to manage adinventory
+
+Example
+=======
+
+Backend
+In AdSlot model you define a unit EXAMPLESLOT
+In AdUnit model let on homepage with url '/', assume google sense keywords will be 'homepage' & 'homepage',hence
+keyword_1 and keyword_2 will be 'homepage' and there is no swosh ad. 
+In adslots select EXAMPLESLOT and save the object.
+
+Template
+In homepage template where you need to display ad use {{EXAMPLESLOT}} 
