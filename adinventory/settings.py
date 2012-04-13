@@ -57,3 +57,5 @@ BOTTOM_SCRIPT = '''
                 });
                 </script>
                 '''
+
+SEARCH_URL = '/college-search/'
